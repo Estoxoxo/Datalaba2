@@ -1,0 +1,8 @@
+streamlit
+pandas
+xlsxwriter
+openpyxl==3.0.10
+google-cloud-bigquery
+google-auth-httplib2
+
+
