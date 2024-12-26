@@ -1,0 +1,24 @@
+# Descarta archivos de compilación
+*.pyc
+__pycache__/
+.pytest_cache/
+
+# Descarta archivos de configuración local
+.DS_Store
+config.local.py
+
+# Descarta archivos de caché
+node_modules/
+npm-debug.log*
+
+# Descarta archivos grandes
+*.zip
+*.tar.gz
+*.rar
+
+# Descarta archivos de IDE
+.idea/
+.vscode/
+
+# Descarta el archivo JSON con la credencial
+planar-berm-444121-j6-c53ed7e235d1.json

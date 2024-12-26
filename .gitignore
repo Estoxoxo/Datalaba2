@@ -1,0 +1,75 @@
+
+
+# Ignora archivos de compilación
+*.pyc
+__pycache__/
+.pytest_cache/
+
+# Ignora archivos de configuración local
+.DS_Store
+config.local.py
+
+# Ignora archivos de caché
+node_modules/
+npm-debug.log*
+
+# Ignora archivos grandes
+*.zip
+*.tar.gz
+*.rar
+
+# Ignora archivos de IDE
+.idea/
+.vscode/
+
+# Ignora el archivo JSON con la credencial
+planar-berm-444121-j6-c53ed7e235d1.json
+
+Last login: Thu Dec 26 15:19:03 on ttys001
+(base) esteban.jimenez@CR-IT00626 ~ % cd Desktop 
+(base) esteban.jimenez@CR-IT00626 Desktop % cd Datalaba2 
+(base) esteban.jimenez@CR-IT00626 Datalaba2 % touch .gitignore
+(base) esteban.jimenez@CR-IT00626 Datalaba2 % nano .gitignore
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  UW PICO 5.09                    File: .gitignore                    Modified  
+
+node_modules/
+npm-debug.log*
+
+# Descarta archivos grandes
+*.zip
+*.tar.gz
+*.rar
+
+# Descarta archivos de IDE
+.idea/
+.vscode/
+
+# Descarta el archivo JSON con la credencial
+planar-berm-444121-j6-c53ed7e235d1.json
+
+
+
+
+
+
+^G Get Help  ^O WriteOut  ^R Read File ^Y Prev Pg   ^K Cut Text  ^C Cur Pos   
+^X Exit      ^J Justify   ^W Where is  ^V Next Pg   ^U UnCut Text^T To Spell  
