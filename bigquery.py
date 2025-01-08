@@ -5,14 +5,21 @@ from google.cloud import bigquery
 from google.oauth2 import service_account
 
 import pandas as pd
+import os
+import json
 
 
 
 # Ajustar la ruta a las credenciales
 
-credentials_path = '/Users/esteban.jimenez/DataLab/planar-berm-444121-j6-c53ed7e235d1.json'
+# Leer las credenciales desde las variables de entorno (secret de GitHub)
+credentials_json = os.environ.get("BIGQUERY")
+if credentials_json is None:
+    raise ValueError("El secret 'BIGQUERY' no está configurado en el entorno.")
 
-credentials = service_account.Credentials.from_service_account_file(credentials_path)
+# Crear las credenciales usando el contenido del secret
+credentials_dict = json.loads(credentials_json)
+credentials = service_account.Credentials.from_service_account_info(credentials_dict)
 
 client = bigquery.Client(credentials=credentials)
 
