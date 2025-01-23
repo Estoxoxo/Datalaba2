@@ -10,7 +10,7 @@ import pandas as pd
 
 # Ajustar la ruta a las credenciales
 
-credentials_path = ''
+credentials_path = 'Bigquery'
 
 credentials = service_account.Credentials.from_service_account_file(credentials_path)
 
