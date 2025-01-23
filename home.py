@@ -8,9 +8,9 @@ def get_image_base64(image_path):
 
 def show_home():
     """Página inicial con opciones de navegación."""
-    auto_pruebas_base64 = get_image_base64('/Users/esteban.jimenez/DataLab/Images/Auto_pruebas.png')
-    unitarias_base64 = get_image_base64('/Users/esteban.jimenez/DataLab/Images/unitarias.png')
-    Migraciaones_base64 = get_image_base64('/Users/esteban.jimenez/DataLab/Images/Bigquery.png')
+    auto_pruebas_base64 = get_image_base64('/app/Images/Auto_pruebas.png')
+    unitarias_base64 = get_image_base64('/app/Images/unitarias.png')
+    Migraciaones_base64 = get_image_base64('/app/Images/Bigquery.png')
 
     # Crear dos columnas con margen
     col1, col2,col3 = st.columns(3, gap="large")

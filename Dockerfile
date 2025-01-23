@@ -14,5 +14,5 @@ RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 EXPOSE 8501
 
 # Comando para ejecutar la aplicación
-CMD ["streamlit", "run", "home.py", "--server.address=0.0.0.0"]
+CMD ["streamlit", "run", "/app/app.py", "--server.address=0.0.0.0"]
 
