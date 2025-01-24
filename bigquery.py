@@ -10,16 +10,7 @@ import json
 import io
 import re
 
-# Ajustar la ruta a las credenciales
 
-credentials_json = os.environ.get("BIGQUERY")
-if credentials_json is None:
-    raise ValueError("El secret 'BIGQUERY' no está configurado en el entorno.")
-
-credentials_dict = json.loads(credentials_json)
-credentials = service_account.Credentials.from_service_account_info(credentials_dict)
-
-client = bigquery.Client(credentials=credentials)
 
 
 # Inicializar `results_df` en `st.session_state` si no existe
