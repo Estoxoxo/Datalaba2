@@ -27,11 +27,16 @@ if 'results_df' not in st.session_state:
     st.session_state['results_df'] = pd.DataFrame()
 
 # Ajustar la ruta a las credenciales
-credentials_path = '/Users/esteban.jimenez/DataLab/planar-berm-444121-j6-c53ed7e235d1.json'
-credentials = service_account.Credentials.from_service_account_file(credentials_path)
+
+credentials_json = os.environ.get("BIGQUERY")
+if credentials_json is None:
+    raise ValueError("El secret 'BIGQUERY' no está configurado en el entorno.")
+
+credentials_dict = json.loads(credentials_json)
+credentials = service_account.Credentials.from_service_account_info(credentials_dict)
+
 client = bigquery.Client(credentials=credentials)
 
-# Función para aplicar colores condicionales
 # Función para aplicar colores condicionales
 def color_text(text, color):
     return f"<span style='color:{color};'>{text}</span>"
